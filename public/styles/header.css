@@ -1,0 +1,19 @@
+body header {
+  height: 450px;
+  width: 100%;
+  background-color: #d69900;
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+}
+
+body header .avatar {
+    position: relative;
+    padding-top: 80px;
+    text-align: center;
+}
+
+body header .name {
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
