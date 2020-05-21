@@ -25,10 +25,11 @@ body {
 
 body main {
   width: 90%;
-  text-align: justify;
-  margin-right: 100px;
-  margin-left: 100px;
+  align-content: center;
   background-color: #f4f1ec;
+  margin-left: 5%;
+  margin-right: 5%;
+
 }
 
 

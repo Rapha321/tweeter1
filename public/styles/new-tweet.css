@@ -1,0 +1,22 @@
+main .new-tweet .counter {
+  float: right;
+  font-family: 'Bungee';
+}
+
+main .new-tweet form {
+  align-content: center;
+}
+
+.tweet-button {
+  color: #FFFFFF;
+  background-color: #4056A1;
+  font-family: 'Bungee';
+}
+
+.new-tweet textarea {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 4px solid black;
+  width: 100%;
+}

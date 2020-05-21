@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/1183c3861a.js" crossorigin="anonymous"></script>
@@ -48,18 +49,21 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p>
-        Cupcake tootsie roll jujubes pudding. Croissant chocolate cake danish oat cake caramels dragée topping. Icing caramels dragée fruitcake candy canes. Marzipan sugar plum lollipop halvah topping jelly beans lollipop marshmallow. Halvah lollipop jelly-o. Cookie tiramisu gingerbread. Muffin lollipop cheesecake marshmallow tart oat cake fruitcake cupcake. Halvah cheesecake apple pie cake marshmallow cookie. Marzipan jelly beans jelly jelly-o candy canes marshmallow cake cheesecake. Chocolate bar cotton candy jelly macaroon tiramisu powder gingerbread bear claw biscuit. Donut bear claw donut. Candy macaroon dessert brownie chocolate tart dragée marzipan. Biscuit sugar plum gummi bears soufflé donut donut donut cake.
-        <br><br>
-        Jelly dragée biscuit bonbon liquorice wafer bear claw chocolate cake. Tart tootsie roll cupcake tiramisu pastry pastry dessert. Powder cookie gummies chocolate cake tart ice cream bear claw. Dragée cookie candy canes gummi bears lollipop jujubes bonbon. Ice cream marshmallow macaroon caramels gummies carrot cake caramels muffin. Powder cotton candy sugar plum cookie cupcake gummies tart candy canes. Muffin jelly sugar plum gummi bears. Carrot cake marshmallow tootsie roll donut topping bonbon. Gummies candy canes caramels cake cookie wafer bear claw dragée marzipan. Powder bear claw lemon drops cake cake. Chocolate bar powder apple pie gingerbread marshmallow jelly-o chocolate. Oat cake jelly-o danish croissant cheesecake jelly powder toffee.
-        <br><br>
-        Toffee cheesecake chupa chups. Liquorice chocolate bar liquorice soufflé tart jujubes pudding sesame snaps. Danish macaroon carrot cake pudding cake cupcake. Donut chocolate bar gummi bears marshmallow sesame snaps. Jelly beans wafer toffee pie. Tiramisu sweet carrot cake tiramisu powder toffee lollipop. Jelly-o icing muffin toffee. Cookie pastry macaroon halvah candy canes sweet roll chocolate cake candy. Chupa chups biscuit gingerbread. Chocolate cake carrot cake pastry cake pudding gingerbread chupa chups cheesecake brownie. Tiramisu cookie macaroon apple pie macaroon gingerbread cheesecake macaroon. Toffee cheesecake jelly. Wafer lemon drops biscuit jujubes caramels sugar plum brownie pudding tiramisu. Fruitcake dessert cake pie.
-        <br><br>
-        Jelly beans donut cookie pudding gummies oat cake gummies ice cream macaroon. Marzipan cheesecake jujubes halvah bonbon dragée. Pudding marzipan tiramisu. Marzipan topping pastry oat cake biscuit sweet roll cupcake macaroon tart. Sesame snaps sugar plum soufflé biscuit jelly muffin lollipop chupa chups brownie. Dragée lemon drops lollipop apple pie chupa chups pastry jelly gummies marzipan. Cake cake marzipan soufflé gummi bears. Croissant bonbon topping. Candy canes sugar plum oat cake jelly-o chocolate sugar plum. Danish dessert powder chocolate bar. Bonbon oat cake donut. Dragée gingerbread powder cake jujubes marzipan. Sweet dessert bear claw pudding sugar plum gummi bears cake. Candy canes cake cookie tart croissant chocolate cake.
-        <br><br>
-        Marzipan macaroon chocolate cake biscuit bear claw jujubes. Pudding sesame snaps gummies topping gummies. Liquorice chupa chups carrot cake candy pastry tootsie roll. Marzipan cookie marshmallow brownie. Jelly fruitcake jujubes croissant tiramisu cotton candy lollipop chocolate bar. Jelly beans candy cotton candy brownie cheesecake jelly-o. Marshmallow cookie tart. Sweet roll pie ice cream. Pastry icing tiramisu pastry chocolate bar. Pudding candy canes pudding. Topping bear claw topping pie. Gingerbread muffin jujubes chupa chups jelly beans. Chocolate bar icing ice cream muffin caramels sweet soufflé sugar plum liquorice. Ice cream oat cake cookie cotton candy marzipan jujubes jujubes.
-      </p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets/" method="POST">
+          <!-- <label for="tweet-text">What are you humming about?</label> -->
+          <br>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <br>
+
+          <button class="tweet-button" type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </form>
+      </section>
+
 
     </main>
   </body>
 </html>
+
