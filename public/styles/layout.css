@@ -29,8 +29,68 @@ body main {
   background-color: #f4f1ec;
   margin-left: 5%;
   margin-right: 5%;
-
 }
+
+.tweet article {
+  border: 3px solid black;
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.tweet article:hover {
+  border: 4px solid black;
+  box-shadow: 10px 10px 5px #888;
+}
+
+.tweet article .tweet-header {
+  height: 30%;
+}
+
+.tweet article .tweet-header img {
+  padding-left: 20px
+}
+
+
+.tweet article .tweet-header .name {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.tweet article .tweet-header .initial {
+  padding-top: 20px;
+  padding-right: 20px;
+  float: right;
+}
+
+.tweet article:hover .tweet-header .initial {
+  display: none;
+}
+
+.tweet article .content {
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 50%;
+  border-bottom: 3px solid black;
+}
+
+.tweet article .footer {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 20%;
+}
+
+.tweet article .footer .icons {
+  float: right;
+  color: midnightblue;
+}
+
+
 
 
 
