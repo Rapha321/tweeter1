@@ -48,22 +48,22 @@ body main {
 }
 
 .tweet article .tweet-header {
-  height: 30%;
+  height: 30vw;
+
 }
 
 .tweet article .tweet-header img {
-  padding-left: 20px
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 
 .tweet article .tweet-header .name {
   text-align: center;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .tweet article .tweet-header .initial {
-  padding-top: 20px;
+  padding-top: 10px;
   padding-right: 20px;
   float: right;
 }
@@ -73,21 +73,38 @@ body main {
 }
 
 .tweet article .content {
+  display:block;
   padding-right: 20px;
   padding-left: 20px;
-  height: 50%;
+  padding-top: 25px;
+  height: 50vw;
   border-bottom: 3px solid black;
+  text-align: left;
 }
 
+
 .tweet article .footer {
+  height: 20vw;
+  margin-top: 5px;
+}
+
+.tweet article .footer span {
+  float: left;
   padding-left: 20px;
-  padding-right: 20px;
-  height: 20%;
+  height: 35px;
+  font-size: 18px;
 }
 
 .tweet article .footer .icons {
   float: right;
   color: midnightblue;
+  align-items: right;
+  padding-right: 20px;
+  font-size: 18px;
+}
+
+.tweet article .footer i {
+  margin-right: 5px;
 }
 
 
