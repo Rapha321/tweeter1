@@ -23,6 +23,14 @@ nav .new-tweet {
 nav .new-tweet .write-new-tweet {
   margin-top: 10px;
   margin-bottom: 0;
+  background-color: #4056A1;
+  border: none;
+  color: white;
+  opacity: 0.5;
+}
+
+nav .new-tweet .write-new-tweet:hover {
+  opacity: 1;
 }
 
 nav .new-tweet .new-tweet-arrow {

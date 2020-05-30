@@ -19,4 +19,13 @@ main .new-tweet form {
   border-left: none;
   border-bottom: 4px solid black;
   width: 100%;
+  overflow: scroll;
+}
+
+.error-text {
+  display: none;
+}
+
+.error-empty {
+  display: none;
 }

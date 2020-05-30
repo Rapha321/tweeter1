@@ -51,6 +51,34 @@ let createTweetElement = function(data) {
 
 $(document).ready(function() {  // to make sure that the DOM of the page is ready to manipulate.
 
+  // make tweet textarea focus when user open the app.
+  $('#tweet-text:first').focus();
+
+  // When the user scrolls down 300px from the top of the document, show the button
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 300){
+      $('.arrow-up').fadeIn();
+    } else{
+      $('.arrow-up').fadeOut();
+    }
+  });
+
+  // when top arrow button is clicked, scrolled to the top
+  $(".arrow-up").click(function(){
+    $('html ,body').animate({scrollTop : 0},800);
+  });
+
+  // when 'write new tweet' button is clicked, textarea becomes visible if its not and vice versa
+  $('.write-new-tweet').click(function() {
+    if ($('.container .new-tweet').is(':visible')) {
+      $('.container .new-tweet').slideUp()
+    }
+    else {
+      $('.container .new-tweet').slideDown()
+      $('#tweet-text').focus()
+    }
+  })
+
   // GET request from server
   let loadTweets = function (url) {
     $.ajax({
@@ -71,11 +99,11 @@ $(document).ready(function() {  // to make sure that the DOM of the page is read
   // To check if form is submitable. Cannot submit form if input is null/empty or input length > 140
   let submitable = function () {
     if ($('#tweet-text').val().length > 140) {
-      alert("Text content cannot be more than 140 characters!")
+      $('.error-text').css({'color': 'red'}).slideDown()
       return false
     }
     else if ($('#tweet-text').val() === "" || $('#tweet-text').val() === null) {
-      alert("Text content cannot be empty or null")
+      $('.error-empty').css({'color': 'red'}).slideDown()
       return false
     }
     else {
@@ -95,9 +123,12 @@ $(document).ready(function() {  // to make sure that the DOM of the page is read
        })
         .done(function () {
             loadTweets("http://localhost:8080/tweets")
+            $('.error-text').slideUp()
+            $('.error-empty').slideUp()
             $('#tweet-text').val("") // emptied textarea after submit botton is clicked
             $('output').text("140")  //reset counter to 140
             $('.tweet').empty() // emptied form so that tweet does not get repeated
+            $('.container .new-tweet').slideUp()
         })
         .fail(function () {
           alert('error')
@@ -108,6 +139,12 @@ $(document).ready(function() {  // to make sure that the DOM of the page is read
     }
 
   })
+
+  $(window).scroll(function() {
+   if($(window).scrollTop() + $(document).height() > $('.new-tweet').height()) {
+      $('.arrow-up').css('display','block')
+   }
+});
 
 });
 
