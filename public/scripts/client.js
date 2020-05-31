@@ -36,7 +36,9 @@ let createTweetElement = function(data) {
             </div>
 
             <footer class="footer">
-              <span>${escape(data.created_at)}</span>
+              <span>
+                ${moment().startOf('hour').fromNow()}
+              </span>
               <div class="icons">
                 <i class="fas fa-flag"></i>
                 <i class="fas fa-retweet"></i>
