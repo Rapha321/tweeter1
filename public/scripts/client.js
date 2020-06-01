@@ -37,7 +37,7 @@ let createTweetElement = function(data) {
 
             <footer class="footer">
               <span>
-                ${moment().startOf('hour').fromNow()}
+                ${moment().format('MMMM Do YYYY, h:mm:ss a')}
               </span>
               <div class="icons">
                 <i class="fas fa-flag"></i>
@@ -52,6 +52,11 @@ let createTweetElement = function(data) {
 
 
 $(document).ready(function() {  // to make sure that the DOM of the page is ready to manipulate.
+
+  // make arrow in navbar continuously moving up and down
+  // $('.new-tweet-arrow').animate({
+  //   transform: translateY(4px)
+  // })
 
   // make tweet textarea focus when user open the app.
   $('#tweet-text:first').focus();
