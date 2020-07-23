@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  color: #FFFFFF;
-  background-color: #4056A1;
+  color: #ffffff;
+  background-color: #4056a1;
   height: 120px;
   width: 100%;
   z-index: 6;
@@ -13,7 +13,7 @@
 nav .logo {
   float: left;
   font-size: 40px;
-  font-family: 'Bungee';
+  font-family: "Bungee";
 }
 
 nav .new-tweet {
@@ -23,7 +23,7 @@ nav .new-tweet {
 nav .new-tweet .write-new-tweet {
   margin-top: 10px;
   margin-bottom: 0;
-  background-color: #4056A1;
+  background-color: #4056a1;
   border: none;
   color: white;
   opacity: 0.5;
@@ -33,21 +33,32 @@ nav .new-tweet .write-new-tweet:hover {
   opacity: 1;
 }
 
-@keyframes arrow {
+@-webkit-keyframes arrow {
   from {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   to {
-    transform: translateY(6px);
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+  }
+}
+
+@keyframes arrow {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
   }
 }
 
 nav .new-tweet .new-tweet-arrow {
   text-align: center;
   color: #ff0000;
-  animation: arrow 0.7s infinite;
+  -webkit-animation: arrow 0.7s infinite;
+          animation: arrow 0.7s infinite;
 }
-
-
-
-
+/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,51 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  background-color: #4056a1;
+  height: 120px;
+  width: 100%;
+  z-index: 6;
+  padding: 1.5em;
+}
+
+nav .logo {
+  float: left;
+  font-size: 40px;
+  font-family: "Bungee";
+}
+
+nav .new-tweet {
+  float: right;
+}
+
+nav .new-tweet .write-new-tweet {
+  margin-top: 10px;
+  margin-bottom: 0;
+  background-color: #4056a1;
+  border: none;
+  color: white;
+  opacity: 0.5;
+}
+
+nav .new-tweet .write-new-tweet:hover {
+  opacity: 1;
+}
+
+@keyframes arrow {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(6px);
+  }
+}
+
+nav .new-tweet .new-tweet-arrow {
+  text-align: center;
+  color: #ff0000;
+  animation: arrow 0.7s infinite;
+}
+
+

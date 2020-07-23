@@ -1,11 +1,10 @@
 body .header {
   height: 450px;
-  /*width: 100%;*/
-  background-color: #d69900;
-  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
-
+  background-image: url("/images/flower-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: ridge;
 }
-
 
 body .header .avatar {
   position: relative;
@@ -13,10 +12,10 @@ body .header .avatar {
   text-align: center;
 }
 
-
 body .header .name {
   position: relative;
   text-align: center;
   padding-bottom: 20px;
+  color: white;
 }
-
+/*# sourceMappingURL=header.css.map */

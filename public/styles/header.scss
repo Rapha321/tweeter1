@@ -1,0 +1,22 @@
+body .header {
+  height: 450px;
+  background-image: url("/images/flower-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: ridge;
+}
+
+body .header .avatar {
+  position: relative;
+  padding-top: 80px;
+  text-align: center;
+}
+
+body .header .name {
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+  color: white;
+}
+
+
