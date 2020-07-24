@@ -53,6 +53,7 @@ let createTweetElement = function(data) {
 
 $(document).ready(function() {  // to make sure that the DOM of the page is ready to manipulate.
 
+
   // make arrow in navbar continuously moving up and down
   // $('.new-tweet-arrow').animate({
   //   transform: translateY(4px)
@@ -129,7 +130,7 @@ $(document).ready(function() {  // to make sure that the DOM of the page is read
           data: $tweetContent.serialize()
        })
         .done(function () {
-            loadTweets("http://localhost:8080/tweets")
+            loadTweets("http://localhost:5000/tweets")
             $('.error-text').slideUp()
             $('.error-empty').slideUp()
             $('#tweet-text').val("") // emptied textarea after submit botton is clicked
@@ -154,6 +155,7 @@ $(document).ready(function() {  // to make sure that the DOM of the page is read
 });
 
 });
+
 
 
 
