@@ -53,12 +53,6 @@ let createTweetElement = function(data) {
 
 $(document).ready(function() {  // to make sure that the DOM of the page is ready to manipulate.
 
-
-  // make arrow in navbar continuously moving up and down
-  // $('.new-tweet-arrow').animate({
-  //   transform: translateY(4px)
-  // })
-
   // make tweet textarea focus when user open the app.
   $('#tweet-text:first').focus();
 
@@ -88,13 +82,12 @@ $(document).ready(function() {  // to make sure that the DOM of the page is read
   })
 
   // GET request from server
-  let loadTweets = function (url) {
-    $.ajax({
-      url,
-      method: 'GET',
+  let loadTweets = function () {
+    $.ajax("/tweets", {
+      method: 'GET'
     })
-      .done(function (data) {
-        renderTweets(data)
+      .done(function (tweets) {
+        renderTweets(tweets)
       })
       .fail(function () {
         alert('error')
@@ -130,7 +123,7 @@ $(document).ready(function() {  // to make sure that the DOM of the page is read
           data: $tweetContent.serialize()
        })
         .done(function () {
-            loadTweets("http://localhost:5000/tweets")
+            loadTweets()
             $('.error-text').slideUp()
             $('.error-empty').slideUp()
             $('#tweet-text').val("") // emptied textarea after submit botton is clicked
