@@ -1,5 +1,7 @@
 "use strict";
 
+const path = require('path');
+
 // Basic express setup:
 
 const PORT          = process.env.PORT || 5000;
@@ -8,7 +10,9 @@ const bodyParser    = require("body-parser");
 const app           = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+// Serve the `public` folder from the project root. Use an absolute path so this works when
+// the app is required as a module (for example by Vercel serverless functions).
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 const db = require("./lib/in-memory-db");
@@ -29,6 +33,13 @@ const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 // Mount the tweets routes at the "/tweets" path prefix:
 app.use("/tweets", tweetsRoutes);
 
-app.listen(PORT, () => {
-  console.log("Example app listening on port " + PORT);
-});
+// Only start the server when this file is run directly (npm start / node server/index.js).
+// When the app is imported (for example by a serverless platform like Vercel),
+// we export the Express app instead of calling .listen()
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log("Example app listening on port " + PORT);
+  });
+}
+
+module.exports = app;
